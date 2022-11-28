@@ -19,3 +19,10 @@ Det er aller siste man må gjøre er å krysse av "Do not allow bypassing the ab
 
 Trykk så på "Create"
 ![img_4.png](img_4.png)
+
+
+### Oppgave 3.1
+Workflowen feiler fordi brukernavn og passord trengs. Dette har ikke blitt lagt inn i github som
+ hemmeligheter. For å fikse den feilen velger må man legge inn nye action secrets, en med brukernavn og 
+en med passord.
+![img_5.png](img_5.png)

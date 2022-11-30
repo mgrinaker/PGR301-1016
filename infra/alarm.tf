@@ -1,5 +1,5 @@
 resource "aws_cloudwatch_metric_alarm" "zerosum" {
-  alarm_name                = "total-amount-over-five-minutes"
+  alarm_name                = "total-amount-of-carts-over-five-minutes-1016"
   namespace                 = "1016"
   metric_name               = "carts.count"
 

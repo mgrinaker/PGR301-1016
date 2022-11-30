@@ -5,5 +5,5 @@ variable "candidate_id" {
 
 variable "candidate_email"  {
   type = string
-  default = "1016@studen.kristinaia.no"
+  default = "magr052@student.kristinaia.no"
 }

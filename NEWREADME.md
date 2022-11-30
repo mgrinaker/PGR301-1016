@@ -44,3 +44,9 @@ nøkkelen du fikk fra AWS i stad, det samme med AWS_SECRET_ACCESS_KEY.
 Det neste er å endre i docker.yml filen. Endre under docker tag og docker push der det står 1016 med ditt eget repository 
 navn.
 ![img_8.png](img_8.png)
+
+### Oppgave 5.1
+Årsaken til at Terraform driver å oppretter en ny bucket når den allerede eksisterer er fordi backend 
+ikke er deklarert. Hvis denne ikke blir deklarert vil terraform lage en ny state-fil, og den vil da ikke 
+klare å kjøre seg igjennom uten en feilmelding. Med s3 backen deklarert vil det bli laget en kryptert 
+S3 bucket for å lagre state filer. 

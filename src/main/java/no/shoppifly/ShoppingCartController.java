@@ -7,14 +7,17 @@ import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 
+import java.time.Duration;
 import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
+import java.util.Timer;
 
 @RestController()
 public class ShoppingCartController {
 
 
+    private Timer productTimer;
     private MeterRegistry meterRegistry;
 
     private Map<String, Cart> theShoppingCart = new HashMap();
@@ -24,6 +27,7 @@ public class ShoppingCartController {
 
     @Autowired
     public ShoppingCartController(MeterRegistry meterRegistry) {
+
         this.meterRegistry = meterRegistry;
     }
 
@@ -44,8 +48,10 @@ public class ShoppingCartController {
     @Timed
     @PostMapping(path = "/cart/checkout")
     public String checkout(@RequestBody Cart cart) {
+        long startTime = System.currentTimeMillis();
 
-        meterRegistry.counter("checkout_latency").increment();
+        meterRegistry.counter("checkout").increment();
+        meterRegistry.timer("checkout_latency").record(Duration.ofMillis(System.currentTimeMillis() - startTime));
         return cartService.checkout(cart);
     }
 

@@ -14,11 +14,11 @@ resource "aws_cloudwatch_dashboard" "main" {
         "metrics": [
           [
             "${var.candidate_id}",
-            "checkout_latency.value"
+            "checkout_latency.avg"
           ]
         ],
         "period": 300,
-        "stat": "Maximum",
+        "stat": "Average",
         "region": "eu-west-1",
         "title": "Average responsetime for checkout method"
       }
@@ -33,11 +33,11 @@ resource "aws_cloudwatch_dashboard" "main" {
         "metrics": [
           [
             "${var.candidate_id}",
-            "carts.value"
+            "carts.count"
           ]
         ],
         "period": 300,
-        "stat": "Maximum",
+        "stat": "Sum",
         "region": "eu-west-1",
         "title": "Amount of carts on a time"
       }
@@ -71,11 +71,11 @@ resource "aws_cloudwatch_dashboard" "main" {
         "metrics": [
           [
             "${var.candidate_id}",
-            "checkouts.value"
+            "checkout.count"
           ]
         ],
         "period": 300,
-        "stat": "Maximum",
+        "stat": "Sum",
         "region": "eu-west-1",
         "title": "Total amount of carts that has been checked out"
       }

@@ -1,3 +1,31 @@
+### Oppgave 1
+
+Hva er utfordringene med dagens systemutviklingsprosess - og hvordan vil innføring av DevOps kunne være med på å løse disse? 
+Hvilke DevOps prinsipper blir brutt?
+
+Utfordringene med dagen systemutvikling på dette prosjektet er at de henger ofte etter og at prosjektet havner unødvendig mye etter, 
+som igjen gjør at kunder blir misfornøyde. Dette vil ikke bare føre til misnøye hos kunder, men også hos de ansatte. Det å ofte måtte 
+gå tibake til tidligere versjon....
+Det å innføre DevOps vil gjøre at de kommer til å få en bedre flyt, bedre kontinuerlig leveranse og raskere kontinuerlig integrasjon. 
+Disse prinsippene blir krafitg brutt her. 
+
+
+En vanlig respons på mange feil under release av ny funksjonalitet er å gjøre det mindre hyppig, og samtidig forsøke 
+å legge på mer kontroll og QA. Hva er problemet med dette ut ifra et DevOps perspektiv, og hva kan være en bedre tilnærming?
+
+Ved å release ny funksjonalitet mindre hyppig 
+
+Teamet overleverer kode til en annen avdelng som har ansvar for drift - hva er utfordringen med dette ut ifra et DevOps perspektiv, 
+og hvilke gevinster kan man få ved at team han ansvar for både drift- og utvikling?
+
+Skin the game
+
+Å release kode ofte kan også by på utfordringer. Beskriv hvilke- og hvordan vi kan bruke DevOps prinsipper til 
+å redusere eller fjerne risiko ved hyppige leveraner.
+
+
+
+
 ### Oppgave 3
 For at ingen kan pushe kode direkte til main branch er man nødt til å sette noen 
 "Branch Protection Rules". For å få til dette, går man til Branch Protection Rules som ligger

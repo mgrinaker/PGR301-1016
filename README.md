@@ -45,7 +45,7 @@ har en ny funksjonalitet er unødvenig. Ta dette eksempelet: Man drar ikke på b
 heller planlegger i forveien slik at man slipper å dra på butikken hver eneste dag. Det er lurer å kvalitetssikre koden 
 oftere og da heller ikke release kode så ofte som man har gjort tidligrere.
 
-## Oppgave 3
+## Oppgave 2.3
 For at ingen kan pushe kode direkte til main branch er man nødt til å sette noen 
 "Branch Protection Rules". For å få til dette, går man til Branch Protection Rules som ligger
 under setting og så under Branches igjen. 

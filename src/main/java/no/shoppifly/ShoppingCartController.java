@@ -1,8 +1,11 @@
 package no.shoppifly;
 
 import io.micrometer.core.annotation.Timed;
+import io.micrometer.core.instrument.Gauge;
 import io.micrometer.core.instrument.MeterRegistry;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.boot.context.event.ApplicationReadyEvent;
+import org.springframework.context.ApplicationListener;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
@@ -14,7 +17,7 @@ import java.util.Map;
 import java.util.Timer;
 
 @RestController()
-public class ShoppingCartController {
+public class ShoppingCartController implements ApplicationListener<ApplicationReadyEvent> {
 
 
     private Timer productTimer;
@@ -74,8 +77,17 @@ public class ShoppingCartController {
      */
     @GetMapping(path = "/carts")
     public List<String> getAllCarts() {
-        meterRegistry.counter("carts").increment();
+
         return cartService.getAllsCarts();
+    }
+
+    @Override
+    public void onApplicationEvent(ApplicationReadyEvent applicationReadyEvent) {
+        Gauge.builder("carts_count", cartService,
+                b -> b.getAllsCarts().size()).register(meterRegistry);
+
+        Gauge.builder("cartsvalue", cartService,
+                c -> c.getCartsValueSum().floatValue()).register(meterRegistry);
     }
 
 

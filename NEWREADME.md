@@ -3,16 +3,26 @@
 Hva er utfordringene med dagens systemutviklingsprosess - og hvordan vil innføring av DevOps kunne være med på å løse disse? 
 Hvilke DevOps prinsipper blir brutt?
 
-Utfordringene med dagen systemutvikling på dette prosjektet er at de henger ofte etter og at prosjektet havner unødvendig mye etter, 
-som igjen gjør at kunder blir misfornøyde. Dette vil ikke bare føre til misnøye hos kunder, men også hos de ansatte. Det å ofte måtte 
-gå tibake til tidligere versjon....
-Det å innføre DevOps vil gjøre at de kommer til å få en bedre flyt, bedre kontinuerlig leveranse og raskere kontinuerlig integrasjon. 
-Disse prinsippene blir krafitg brutt her. 
-
+Utfordringene med dagens systemutviklingsprosess på dette prosjektet er at det ikke er en god flyt. Det å måtte gå tilbake 
+til tidligere versjoner gjør både kunder og ansatte misfornøyde. Det å innføre DevOps vil ha en stor påvirkning på dette 
+prosjektet ved at ting vil gå mer automatisk, det å deploye vil mer stabilt og slipper å feile, utviklingslederne slipper 
+å alltid måtte se over alle leveranser, i tillegg vil det bli lettere å overføre filer til andre enheter.
+Her er det tre viktige DevOps prinsipper som blir brutt, flyt, kontinuerlig leveranse og kontinuerlig integrasjon.
 
 En vanlig respons på mange feil under release av ny funksjonalitet er å gjøre det mindre hyppig, og samtidig forsøke 
 å legge på mer kontroll og QA. Hva er problemet med dette ut ifra et DevOps perspektiv, og hva kan være en bedre tilnærming?
 
+Hvis jeg forstår spørsmålet riktig, med tanke på kunnskapen jeg har fra Devops perspektiv, er at under relase av 
+ny funksjonalitet bør skje mindre hyppig. Hvis dette skjer ofte vil sjansen for feil være stor, og man vil mest sannsynligvis 
+ende opp med å gå tilbake til en tidligere versjon fordi den hadde mindre feil på seg. Derfor er det lurt å gjøre relase 
+mindre hyppig, men ikke for sjeldent heller. Grunnen til dette er for å ikke få utålmodig kunder, 
+
+Grunne til dette er for å redusere risikoen for feil
+
+Quality Assurance - kvalitetssikring
+Agile Manifesto
+Release often
+not deploy too often and not to late
 Ved å release ny funksjonalitet mindre hyppig 
 
 Teamet overleverer kode til en annen avdelng som har ansvar for drift - hva er utfordringen med dette ut ifra et DevOps perspektiv, 
@@ -23,7 +33,13 @@ Skin the game
 Å release kode ofte kan også by på utfordringer. Beskriv hvilke- og hvordan vi kan bruke DevOps prinsipper til 
 å redusere eller fjerne risiko ved hyppige leveraner.
 
-
+Utfordringene som vil oppstå under hyppig release er feil, kostbart, og eventuelle tap av kunder. Ved å release ofte 
+vil si mer stress på de ansatte som er der, som igjen vil føre til mer feil. 
+Sjansen for feil vil være større ved å release kode ofte, enn det vil være ved å gjøre det mindre.
+Man får ikke bygd 
+inn kvaliteten på en like god måte hvis man skal release ofte fordi man vil 
+Andre utofordringer ved å release ofte vil være 
+Deployet ofte, relase sjeldent. Ved å deploye ofte vil det gjør at man får kvalitetssikret 
 
 
 ### Oppgave 3

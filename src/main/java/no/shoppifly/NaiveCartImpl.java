@@ -1,5 +1,6 @@
 package no.shoppifly;
 
+import io.micrometer.core.annotation.Timed;
 import org.springframework.stereotype.Component;
 
 import java.util.*;
@@ -23,6 +24,7 @@ class NaiveCartImpl implements CartService {
         return shoppingCarts.put(cart.getId(), cart);
     }
 
+    @Timed
     @Override
     public String checkout(Cart cart) {
         shoppingCarts.remove(cart.getId());
@@ -32,6 +34,11 @@ class NaiveCartImpl implements CartService {
     @Override
     public List<String> getAllsCarts() {
         return new ArrayList<>(shoppingCarts.keySet());
+    }
+
+    @Override
+    public Float getCartsValueSum(){
+        return total();
     }
 
     // @author Jim; I'm so proud of this one, took me one week to figure out !!!

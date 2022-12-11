@@ -2,43 +2,43 @@
 
 ## Oppgave 1
 
-### Hva er utfordringene med dagens systemutviklingsprosess - og hvordan vil innføring av DevOps kunne være med på å løse disse? 
-Hvilke DevOps prinsipper blir brutt?
+### Hva er utfordringene med dagens systemutviklingsprosess - og hvordan vil innføring av DevOps kunne være med på å løse disse? Hvilke DevOps prinsipper blir brutt?
 
-Utfordringene med dagens systemutviklingsprosess på dette prosjektet er at det ikke er en god flyt. Det å måtte gå tilbake 
-til tidligere versjoner gjør både kunder og ansatte misfornøyde. Når man deployer og det alltid er feil blir det unødvendig 
-mye tid til å fikse opp i dette. Det å innføre DevOps infrastrukturen vil ha en stor påvirkning på dette 
-prosjektet ved at ting vil gå mer automatisk, det å deploye vil mer stabilt og slipper å feile, utviklingslederne slipper 
-å alltid måtte se over alle leveranser, i tillegg vil det bli lettere å overføre filer til andre enheter.
-Her er det tre viktige DevOps prinsipper som blir brutt, flyt, kontinuerlig leveranse og kontinuerlig integrasjon.
+Utfordringene med dagens systemutviklingsprosess på dette prosjektet er at det ikke er en god flyt og mye waste, og det å gjøre feil kan skape 
+store forsinkelser. Dette vises ved at når man deployer med feil blir brukt unødvendig tid på å ordne opp i problemet, som igjen 
+gjør kunden utålmodig. Ved å innføre feedback prinsippet vil sjansen for å finne feilen før man deployer være større. Men hvis man 
+ikke har funnet feilen med feedback så kan flyt hjelpe med å finne den eventuelle feilen med github actions. Og da også ved å 
+implementere kontinuerlig forbedring vil utviklerne tørre å ta større sjanser grunnet at det mer greit å gjøre feil med DevOps 
+prinsippet implenetert. Her vil man da lære av sine egne feil men også andres feil. Så her blir alle tre DevOps prinsippene brutt 
+flyt, feedback og kontinuerlig forbedring.
 
-### En vanlig respons på mange feil under release av ny funksjonalitet er å gjøre det mindre hyppig, og samtidig forsøke 
-å legge på mer kontroll og QA. Hva er problemet med dette ut ifra et DevOps perspektiv, og hva kan være en bedre tilnærming?
+### En vanlig respons på mange feil under release av ny funksjonalitet er å gjøre det mindre hyppig, og samtidig forsøke å legge på mer kontroll og QA. Hva er problemet med dette ut ifra et DevOps perspektiv, og hva kan være en bedre tilnærming?
 
 Hvis jeg forstår spørsmålet riktig, med tanke på kunnskapen jeg har fra Devops perspektiv, er at relase av 
 ny funksjonalitet bør ikke skje for ofte, men ikke for sjeldent heller. Hvis release av kode skjer for ofte vil kundene 
-bli irritert over hvor ofte de på oppdatere, men hvis det skjer for sjeldent vil kunden bli utålmodig. 
+bli irritert over hvor ofte de må oppdatere, men hvis det skjer for sjeldent vil kunden bli utålmodig. 
 Det som også vil skje hvis man velger å release sjeldent er at man ikke vil lære like fort om den nye release funker eller ikke 
 man kan fort ende opp at de nye funksjonalitetene ikke fungerte like bra som man hadde håpet på. Og da for å fikse feilen 
-vil ta lengre tid, slik at man ender opp med å evnetuelt måtte gå tilbake til en tidligere versjon som fungerer. 
+vil ta lengre tid, slik at man ender opp med å evnetuelt måtte gå tilbake til en tidligere versjon som fungerer. Ved at dem da eventuelt 
+må gå tilbake til en tidligere versjon vil dette mest sannsynligvis stresse utviklerne som da igjen ender opp med å ordne opp i feilen 
+på en rask og dårlig måte. Her begynner da teknisk gjeld å starte. 
 En bedre tilnærming vil være å heller deploye ofte slik at de som tester koden vil kunne kvalitetssikre den jevnt mens koden 
-er i utvikling. Dette gjør at man får kvalitetssikret koden i god tid og slipper å bruke unødevenig mye tid på. Så når da en 
-release vil skje er sjansen for feil mindre og kunden vil være fornøyd. "Our highest priority is to satisfy customer 
+er i utvikling. Dette gjør at man får kvalitetssikret koden i god tid og slipper å bruke unødvenig mye tid, samt slipper unna mye waste. 
+Så når da en release vil skje er sjansen for feil mindre og kunden vil være fornøyd. "Our highest priority is to satisfy customer 
 through early and continous delivery of valuable software", Agile Manifesto prinsippet.
 
 
-### Teamet overleverer kode til en annen avdelng som har ansvar for drift - hva er utfordringen med dette ut ifra et DevOps perspektiv, 
-og hvilke gevinster kan man få ved at team han ansvar for både drift- og utvikling?
+### Teamet overleverer kode til en annen avdeling som har ansvar for drift - hva er utfordringen med dette ut ifra et DevOps perspektiv, og hvilke gevinster kan man få ved at team han ansvar for både drift- og utvikling?
 
 Gevinsten man kan få ved at et team har ansvar for våde drift- og utvikling er at man kan få ett litt mer eierfølelsen til 
 koden. Et team kommuniserer bedre med hverandre og har mer oversikt og kontroll over prosjektet. Hvis det er noen andre som 
 har ansvar for drift og hvis feil eventuelt har oppstått vil ikke de som bare har ansvar for drift men ikke utviklingen kunne 
 vite hvor feilen ligger og da fikse opp i det fort. De må da gi beskjed videre til utvilingsteamet som da må få deployet 
-den forbedrede koden for å så sende dette til drifte-teamet. Her blir det unødevenig mye tid fram og tilbake og det vil da 
-ta lengre tid før en forbedret kode er på plass.
+den forbedrede koden for å så sende dette til drifte-teamet. Her skapes det da stor waste og en typisk flaskehals. Her blir det unødevenig mye tid fram og tilbake og det vil da 
+ta lengre tid før en forbedret kode er på plass. For å da unngå waste og for å skape mer eierfølese til prosjektet er det 
+anbefalt i følge DevOps perspektiv å la kun ett team ta seg av både koden og driften. 
 
-### Å release kode ofte kan også by på utfordringer. Beskriv hvilke- og hvordan vi kan bruke DevOps prinsipper til 
-å redusere eller fjerne risiko ved hyppige leveraner.
+### Å release kode ofte kan også by på utfordringer. Beskriv hvilke- og hvordan vi kan bruke DevOps prinsipper til å redusere eller fjerne risiko ved hyppige leveraner.
 
 Det å release kode for ofte vil også føre til misnøye hos kundene. Det å måtte hente nye oppdaterinen som kanskje bare 
 har en ny funksjonalitet er unødvenig. Ta dette eksempelet: Man drar ikke på butikken hver dag for å kjøpe en banan. Men 
